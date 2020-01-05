@@ -1,0 +1,16 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "main": "tmp/index.js",
+  "scripts": {
+    "start": "node_modules/.bin/jasmine --config=jasmine.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "puppeteer": "^2.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "url": "http://34.216.224.48:3000/#/login",
+  "screenLoginElements": "card bg-white",
+  "utility": {
+    "email": "#undefined-undefined-Email-39582",
+    "password": "#undefined-undefined-Password-40435",
+    "temp": "#\\31  > div > div.card.bg-white > div.card-content > form > fieldset > div:nth-child(1) > div > label",
+    "warning": "card-action no-border text-left",
+    "login": "div > button",
+    "wornn": " div.card-action.no-border.text-left > span"
+  },
+  "email": "email:liorba@indorz.co",
+  "password": "12345",
+  "slow": 10
+}
