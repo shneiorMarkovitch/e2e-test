@@ -1,15 +1,15 @@
 {
   "url": "http://34.216.224.48:3000/#/login",
-  "screenLoginElements": "card bg-white",
+  "secondUrl": "http://34.216.224.48:3000/#/app/dashboard",
+  "loginForm": ".card.bg-white",
   "utility": {
-    "email": "#undefined-undefined-Email-39582",
-    "password": "#undefined-undefined-Password-40435",
-    "temp": "#\\31  > div > div.card.bg-white > div.card-content > form > fieldset > div:nth-child(1) > div > label",
-    "warning": "card-action no-border text-left",
-    "login": "div > button",
-    "wornn": " div.card-action.no-border.text-left > span"
+    "email": "div:nth-child(1) > div> input",
+    "password": " div:nth-child(2) > div > input",
+    "warning": ".card-action.no-border.text-left",
+    "login": "div > button"
   },
-  "email": "email:liorba@indorz.co",
+  "email": "liorba@indorz.co",
   "password": "12345",
-  "slow": 10
+  "slow": 10,
+  "color": "rgba(0, 0, 0, 0)"
 }

@@ -1,24 +1,54 @@
-// const openBrowser = require('../openBrowser');
-// const conf=require('../conf');
-// const Login = require('../login');
-// let page, browser, login={};
-// (async () => {
-//     ({page, browser} = await openBrowser(page));
-//
-//     login = new Login(page,conf.screenLoginElements);
-//     let r=await login.isExist();
-//     console.log(r, "  false_______");
-//     await page.click(conf.utility.login);
-//     await page.waitFor(2000);
-//     let text=await login.utility.warning.getText();
-//     console.log(text, "           text");
-//     await login.utility.temp.setText("ghfdfgd");
-//     await page.waitFor(2000);
-//     await browser.close();
-// })();
-describe('test', function () {
-     afterAll(()=>browser.close);
-    it('1', async () => {
-        console.log("11111111111111111111111111111111");
-    })
+const openBrowser = require('../api/openBrowser');
+const conf = require('../conf');
+const Login = require('../api/login');
+
+describe('test for login', function () {
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 100000;
+    let page, browser, text, login = {}, email = conf.email, password = conf.password;
+    beforeAll(async () => {
+        ({page, browser} = await openBrowser());
+        login = new Login(page, conf.loginForm);
+    });
+    afterAll(async () => {
+        await browser.close()
+    });
+    it('is login form exist', async () => {
+        let isDialog = await login.isExist();
+        expect(isDialog).toBe(true);
+    });
+    it('Click without text entry', async () => {
+        await page.click(conf.utility.login);
+        text = await login.utility.warning.getText();
+        let color = await login.utility.warning.getColor();
+        expect(text).toBe("Email can't be blank, Password can't be blank");
+        expect(color).toBe(conf.color);
+    });
+    it('Enter email and click', async () => {
+        await login.utility.email.setText("shneior@gmail.com");
+        await page.click(conf.utility.login);
+        text = await login.utility.warning.getText();
+        expect(text).toBe("Password can't be blank");
+    });
+    it('Enter password and click', async () => {
+        await login.utility.email.clearInput();
+        await login.utility.password.setText("770%^&(*d45");
+        await page.click(conf.utility.login);
+        text = await login.utility.warning.getText();
+        expect(text).toBe("Please enter a valid email");
+    });
+    it('Enter wrong password', async () => {
+        await login.utility.email.setText(email);
+        await login.utility.password.setText("l;kj");
+        await page.click(conf.utility.login);
+        text = await login.utility.warning.getText();
+        expect(text).toBe("Please enter a valid password");
+    });
+    it('Enter email & password correct', async () => {
+        await login.utility.email.setText(email);
+        await login.utility.password.setText(password);
+        await page.click(conf.utility.login);
+        await page.waitFor(10000);
+        let url = await page.url();
+        expect(url).toBe(conf.secondUrl)
+    });
 });
