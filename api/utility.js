@@ -23,9 +23,6 @@ class Utility {
         await element.type(text);
     }
 
-    async getColor() {
-        return await this.page.$eval(this.selector, y => window.getComputedStyle(y)["background-color"])
-    }
 }
 
 module.exports = Utility;

@@ -1,15 +1,14 @@
 {
-  "url": "http://34.216.224.48:3000/#/login",
-  "secondUrl": "http://34.216.224.48:3000/#/app/dashboard",
-  "loginForm": ".card.bg-white",
-  "utility": {
-    "email": "div:nth-child(1) > div> input",
-    "password": " div:nth-child(2) > div > input",
-    "warning": ".card-action.no-border.text-left",
-    "login": "div > button"
-  },
-  "email": "liorba@indorz.co",
-  "password": "12345",
-  "slow": 10,
-  "color": "rgba(0, 0, 0, 0)"
+  "url": "http://students-aid.org:9222/",
+  "ual1":"http://students-aid.org:9222/platforms/nuis/register.html",
+  "enjoy":"#register",
+  "utility":{
+    "date":"#dateOfBirth",
+    "name":"#mG61Hd > div > div > div.freebirdFormviewerViewItemList > div:nth-child(2) > div > div.freebirdFormviewerViewItemsTextItemWrapper > div > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input",
+    "size":"#mG61Hd > div > div > div.freebirdFormviewerViewItemList > div:nth-child(3) > div > div.freebirdFormviewerViewItemsTextItemWrapper > div > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input",
+    "patient":"#mG61Hd > div > div > div.freebirdFormviewerViewItemList > div:nth-child(4) > div > div:nth-child(2) > div > span > div > div:nth-child(1) > label > div > div.appsMaterialWizToggleRadiogroupElContainer.exportContainerEl.docssharedWizToggleLabeledControl.freebirdThemedRadio.freebirdThemedRadioDarkerDisabled.freebirdFormviewerViewItemsRadioControl > div > div.appsMaterialWizToggleRadiogroupRadioButtonContainer > div",
+    "coughs":"#mG61Hd > div > div > div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div:nth-child(2) > div > span > div > div:nth-child(1) > label > div > div.appsMaterialWizToggleRadiogroupElContainer.exportContainerEl.docssharedWizToggleLabeledControl.freebirdThemedRadio.freebirdThemedRadioDarkerDisabled.freebirdFormviewerViewItemsRadioControl > div > div.appsMaterialWizToggleRadiogroupRadioButtonContainer > div",
+    "submit":"#mG61Hd > div > div > div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div > span > span",
+    "mar":"#lastname"
+  }
 }
