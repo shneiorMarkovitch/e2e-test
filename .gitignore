@@ -6,5 +6,5 @@ node_modules/
 temp/
 api.js
 temp.js
-
+.vscode/
 
